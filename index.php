@@ -149,12 +149,16 @@ $total = $base + ($base * ITBMS);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="lab9-huella" content="<?php echo $huella; ?>">
   <title>Lab 9 · Estructuras de control</title>
-  
-  
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    h2 { color: #1f3a5f; }
+    table { border-collapse: collapse; }
+    th, td { border: 1px solid #999; padding: 4px 10px; }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Laboratorio #9 · Estructuras de control</h1>
+    <h1 style="text-align: center; margin: 0;">Laboratorio #9 · Estructuras de control</h1>
     <p id="autor">Autor: <?php echo $nombreCompleto; ?></p>
   </header>
 
@@ -183,7 +187,7 @@ $total = $base + ($base * ITBMS);
 
     <section id="ej2">
       <h2>Ejercicio 2 · Notas</h2>
-      <p id="ej2-res" class="resultado "><?php echo "Promedio: " . number_format($promedio, 2) . " | Letra: " . $letra . " | Estado: " . $estado . " | Cuadro de honor: " . $honor; ?></p>
+      <p id="ej2-res" class="resultado <?php echo $estado == "Aprobado" ? "ok" : "error"; ?>"><?php echo "Promedio: " . number_format($promedio, 2) . " | Letra: " . $letra . " | Estado: " . $estado . " | Cuadro de honor: " . $honor; ?></p>
     </section>
 
     <section id="ej3">
