@@ -44,6 +44,24 @@ if ($dia == 3) {
   $miercoles = "No";
 }
 
+// ===== Ejercicio 2: notas (elseif, ternario, &&) =====
+$promedio = ($nota1 + $nota2 + $nota3) / 3;
+
+if ($promedio >= 90) {
+  $letra = "A";
+} elseif ($promedio >= 80) {
+  $letra = "B";
+} elseif ($promedio >= 70) {
+  $letra = "C";
+} elseif ($promedio >= 60) {
+  $letra = "D";
+} else {
+  $letra = "F";
+}
+
+$estado = $promedio >= 70 ? "Aprobado" : "Reprobado";
+$honor = ($promedio >= 90 && $nota1 >= 80 && $nota2 >= 80 && $nota3 >= 80) ? "Sí" : "No";
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -86,7 +104,7 @@ if ($dia == 3) {
 
     <section id="ej2">
       <h2>Ejercicio 2 · Notas</h2>
-      <p id="ej2-res" class="resultado "></p>
+      <p id="ej2-res" class="resultado "><?php echo "Promedio: " . number_format($promedio, 2) . " | Letra: " . $letra . " | Estado: " . $estado . " | Cuadro de honor: " . $honor; ?></p>
     </section>
 
     <section id="ej3">
